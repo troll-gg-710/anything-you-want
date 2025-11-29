@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>絶対押すなボタン</title>
+<style>
+  body {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    flex-direction: column;
+    text-align: center;
+  }
+  button {
+    padding: 20px 40px;
+    font-size: 28px;
+    border-radius: 14px;
+    border: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #ff3b3b;
+  }
+</style>
+</head>
+<body>
+
+<h1>絶対押すなよ？</h1>
+<button id="btn">押したら…鳴る</button>
+
+<audio id="snd" src="sound.mp3"></audio>
+
+<script>
+document.getElementById("btn").addEventListener("click", () => {
+  const snd = document.getElementById("snd");
+  snd.play();
+});
+</script>
+
+</body>
+</html>
